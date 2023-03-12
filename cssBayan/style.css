@@ -69,6 +69,35 @@ img {
     height: 20em;
 }
 /* mem click setups */
-.material-symbols-outlined :checked {
-    transform: rotate(-90deg);
-}  
+input [type='radio']:checked ~ img{
+    opacity: 1;
+    height: 20em;
+}
+
+input [type="radio"]:checked ~ .mem-title .material-symbols-outlined:checked {
+    color: #14A76C;
+    transform: rotate(45deg);
+    opacity: 1;
+}
+@media (hover: hover) {
+    .mem :hover .mem-title{
+        color: #14A76C;
+    }
+    .mem :hover .material-symbols-outlined{
+        opacity: 1;
+    }
+    .mem :hover img {
+        opacity: 1;
+        height: 20em;
+    }
+    input [type='radio']:checked ~ img{
+        opacity: 1;
+        height: 20em;
+    }
+    
+    input [type="radio"]:checked ~ .mem-title .material-symbols-outlined:checked {
+        color: #14A76C;
+        transform: rotate(45deg);
+        opacity: 1;
+    }
+}
