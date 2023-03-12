@@ -29,30 +29,46 @@ label {
     cursor: pointer;
     display: block;
 }
+.mem-top {
+    display: flex;
+}
 .mem-title {
     color: #FF652F;
     margin-bottom: 1em;
-    transition: color 1s ease-out;
-}
-.mem-title:hover {
-    color: #14A76C;
+    transition: color 2s ease-out;
 }
 .material-symbols-outlined {
     color:#FF652F;
+    opacity: 0;
     align-items: right;
-    transition: color 1s ease-out;
-}
-.material-symbols-outlined:hover {
-    transition: 1s ease;
-    color: #14A76C;
-    transform: rotate(90deg);
+    transition: color 5s ease-out;
 }
 img {
     display: flex;
     justify-content: center;
+    cursor: pointer;
     align-items: center;
     overflow: hidden;
     margin-bottom: 2em;
     margin-top: 1em;
-    transition: height 1s ease-out;
+    opacity: 0;
+    height: 0;
+    transition-property: opacity, height;
+    transition-duration: 0s, 0.7s;
+    transition: all 0.7s ease-out;
 }
+/* mem hover setups */
+.mem :hover .mem-title{
+    color: #14A76C;
+}
+.mem :hover .material-symbols-outlined{
+    opacity: 1;
+}
+.mem :hover img {
+    opacity: 1;
+    height: 20em;
+}
+/* mem click setups */
+.material-symbols-outlined :checked {
+    transform: rotate(-90deg);
+}  
