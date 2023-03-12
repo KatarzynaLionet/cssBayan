@@ -34,6 +34,7 @@ label {
 }
 .mem-title {
     color: #FF652F;
+    font-size: 1.7em;
     margin-bottom: 1em;
     transition: color 2s ease-out;
 }
@@ -99,5 +100,44 @@ input [type="radio"]:checked ~ .mem-title .material-symbols-outlined:checked {
         color: #14A76C;
         transform: rotate(45deg);
         opacity: 1;
+    }
+}
+@media (min-width: 320px) {
+    head-title {
+        font-size: 1.2em;
+        margin-bottom: 1.2em;
+    }
+    .mem-item {
+        margin-bottom: 2em;
+    }
+    .mem-title {
+        font-size: 1em;
+        margin-bottom: 0.5em;
+    }
+}
+@media (min-width: 820px) {
+    head-title {
+        font-size: 1.5em;
+        margin-bottom: 1.5em;
+    }
+    .mem-item {
+        margin-bottom: 2.5em;
+    }
+    .mem-title {
+        font-size: 1.4em;
+        margin-bottom: 0.7em;
+    }
+}
+@media (min-width: 1920px) {
+    head-title {
+        font-size: 2em;
+        margin-bottom: 2em;
+    }
+    .mem-item {
+        margin-bottom: 3em;
+    }
+    .mem-title {
+        font-size: 1.7em;
+        margin-bottom: 1em;
     }
 }
