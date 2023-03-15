@@ -1,0 +1,143 @@
+* {
+    margin: 0 auto;
+    padding: 0 auto;
+    box-sizing: border-box;
+}
+body {
+    background-color: #272727;
+}
+input {
+    display: none;
+}
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/* mem */
+head-title {
+    font-size: 2vw;
+    color: #ffe400;
+    text-align: center;
+    margin-bottom: 2em;
+}
+.mem-item {
+    margin-bottom: 3em;
+}
+label {
+    cursor: pointer;
+    display: block;
+}
+.mem-top {
+    display: flex;
+}
+.mem-title {
+    color: #FF652F;
+    font-size: 1.7em;
+    margin-bottom: 1em;
+    transition: color 2s ease-out;
+}
+.material-symbols-outlined {
+    color:#FF652F;
+    opacity: 0;
+    align-items: right;
+    transition: color 5s ease-out;
+}
+img {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 2em;
+    margin-top: 1em;
+    opacity: 0;
+    height: 0;
+    transition-property: opacity, height;
+    transition-duration: 0s, 0.7s;
+    transition: all 0.7s ease-out;
+}
+/* mem hover setups */
+.mem :hover .mem-title{
+    color: #14A76C;
+}
+.mem :hover .material-symbols-outlined{
+    opacity: 1;
+}
+.mem :hover img {
+    opacity: 1;
+    height: 20em;
+}
+/* mem click setups */
+input [type='radio']:checked ~ img{
+    opacity: 1;
+    height: 20em;
+}
+
+input [type="radio"]:checked ~ .mem-title .material-symbols-outlined:checked {
+    color: #14A76C;
+    transform: rotate(45deg);
+    opacity: 1;
+}
+@media (hover: hover) {
+    .mem :hover .mem-title{
+        color: #14A76C;
+    }
+    .mem :hover .material-symbols-outlined{
+        opacity: 1;
+    }
+    .mem :hover img {
+        opacity: 1;
+        height: 20em;
+    }
+    input [type='radio']:checked ~ img{
+        opacity: 1;
+        height: 20em;
+    }
+    
+    input [type="radio"]:checked ~ .mem-title .material-symbols-outlined:checked {
+        color: #14A76C;
+        transform: rotate(45deg);
+        opacity: 1;
+    }
+}
+@media (min-width: 320px) {
+    head-title {
+        font-size: 1.2em;
+        margin-bottom: 1.2em;
+    }
+    .mem-item {
+        margin-bottom: 2em;
+    }
+    .mem-title {
+        font-size: 1em;
+        margin-bottom: 0.5em;
+    }
+}
+@media (min-width: 820px) {
+    head-title {
+        font-size: 1.5em;
+        margin-bottom: 1.5em;
+    }
+    .mem-item {
+        margin-bottom: 2.5em;
+    }
+    .mem-title {
+        font-size: 1.4em;
+        margin-bottom: 0.7em;
+    }
+}
+@media (min-width: 1920px) {
+    head-title {
+        font-size: 2em;
+        margin-bottom: 2em;
+    }
+    .mem-item {
+        margin-bottom: 3em;
+    }
+    .mem-title {
+        font-size: 1.7em;
+        margin-bottom: 1em;
+    }
+}
